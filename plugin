@@ -34,7 +34,7 @@ use pocketmine\command\Command;
 # Basic Start Up Things
 ###################################
 
-class GrimHelper extends PluginBase{
+class GrimHelper extends PluginBase implements Listener{
      public function onEnable(){
        $this->getLogger()->info("§l§eGrimHelper§c Has Been Enable");
        

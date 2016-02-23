@@ -1,4 +1,4 @@
-<?php "server\plugins\GrimHelper.phar" (__HALT_COMPILER();
+<?php 
 
 #########################
 # GrimHelper Was Created By:
@@ -38,8 +38,9 @@ class GrimHelper extends PluginBase implements Listener{
      public function onEnable(){
        $this->getLogger()->info("§l§eGrimHelper§c Has Been Enable");
        
+       @mkdir($this->getDataFolder());
+       $this->saveResource("config.yml");
    $this->config = (new Config($this->getDataFolder()."config.yml", Config::YAML))->getAll();
-       $this->saveDefaultConfig();
     }
 
     public function onDisable(){

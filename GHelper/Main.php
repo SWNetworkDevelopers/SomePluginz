@@ -48,7 +48,7 @@ class GrimHelper extends PluginBase implements Listener{
 }
 public function onCommand(CommandSender $sender, Command $command, $label, array $args){
     $cmd = strtolower($command->getName());
-    if($cmd === "helper"){
+    if($cmd == "helper"){
          $line1 = $this->getConfig()->get("line1");
          $line2 = $this->getConfig()->get("line2");
          $line3 = $this->getConfig()->get("line3");
